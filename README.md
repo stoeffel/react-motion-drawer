@@ -1,6 +1,3 @@
-react-motion-drawer
+react-motion-drawer :warning: WIP :warning:
 =====================
-
-
-### Usage
 
