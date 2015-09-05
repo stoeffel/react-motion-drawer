@@ -31,7 +31,7 @@ import Drawer from 'react-motion-drawer';
 * `height: number`           - height of the drawer
 * `handleWidth: number`      - width of the handle
 * `peakingWidth: number`     - width that the drawer peaks on press
-* `panTolerance: number`     - tolarenc until the drawer starts to move
+* `panTolerance: number`     - tolerance until the drawer starts to move
 * `right: bool`              - drawer on the right side of the screen
 * `overlayColor: string`     - color of the overlay
 
