@@ -1,6 +1,10 @@
 react-motion-drawer :warning: WIP :warning:
 =====================
 
+> Navigation drawer built with the awesome [react-motion][rm] by [@chenglou][c] and [react-hammerjs][rh] by [@JedWatson][j]
+
+
+
 ## Usage
 
 ```js
@@ -35,3 +39,8 @@ import Drawer from 'react-motion-drawer';
 ## License
 
 MIT © [Christoph Hermann](http://stoeffel.github.io)
+
+[rm]: https://github.com/chenglou/react-motion
+[rh]: https://github.com/JedWatson/react-hammerjs
+[c]: https://github.com/chenglou
+[j]: https://github.com/JedWatson
