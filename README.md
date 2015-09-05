@@ -1,6 +1,18 @@
 react-motion-drawer :warning: WIP :warning:
 =====================
 
+## Usage
+
+```js
+import Drawer from 'react-motion-drawer';
+```
+
+```jsx
+  <Drawer open={false} onChange={onChange}>
+    {/* your content */}
+  </Drawer>
+```
+
 ## API
 
 ### Props
