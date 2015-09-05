@@ -30,3 +30,8 @@ import Drawer from 'react-motion-drawer';
 * `panTolerance: number`     - tolarenc until the drawer starts to move
 * `right: bool`              - drawer on the right side of the screen
 * `overlayColor: string`     - color of the overlay
+
+
+## License
+
+MIT © [Christoph Hermann](http://stoeffel.github.io)
