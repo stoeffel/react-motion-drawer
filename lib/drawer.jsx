@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import { Component, PropTypes } from 'react';
 import { Spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
 import extend from '1-liners/extend';
