@@ -10,8 +10,10 @@ const { bool, number, array, object, string, func } = PropTypes;
 export default class Drawer extends Component {
 
   static propTypes = {
+    noTouchOpen: bool,        // can a user pan to open
+    noTouchClose: bool,       // can a user pan to close
     onChange: func,           // called when the drawer is open
-    drawerStyle: object,            // additional drawer styles
+    drawerStyle: object,      // additional drawer styles
     className: object,        // additional drawer className
     overlayClassName: object, // additional overlay className
     config: array,            // configuration of the react-motion animation
@@ -26,6 +28,8 @@ export default class Drawer extends Component {
   };
 
   static defaultProps = {
+    noTouchOpen: false,
+    noTouchClose: false,
     onChange: () => {},
     overlayColor: 'rgba(0, 0, 0, 0.4)',
     config: [350, 40],
@@ -59,6 +63,7 @@ export default class Drawer extends Component {
   isClosing() { return this.isState('IS_CLOSING'); }
 
   onPress(e) {
+    if (this.props.noTouchOpen) return;
     e.preventDefault();
     this.peak();
   }
@@ -105,6 +110,8 @@ export default class Drawer extends Component {
   }
 
   onPan(e) {
+    if (this.isClosed() && this.props.noTouchOpen) return;
+    if (this.isOpen() && this.props.noTouchClose) return;
     e.preventDefault();
 
     const { isFinal, pointers, direction, deltaX } = e;
