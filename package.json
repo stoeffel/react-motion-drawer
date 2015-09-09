@@ -5,7 +5,10 @@
   "scripts": {
     "build": "babel lib --out-dir ./",
     "serve": "node example/server.js",
-    "lint": "eslint lib"
+    "lint": "eslint lib",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm version major && npm publish && git push --follow-tags"
   },
   "main": "./drawer.js",
   "files": [
