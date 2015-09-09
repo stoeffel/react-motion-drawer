@@ -153,18 +153,21 @@ export default class Drawer extends Component {
           {interpolated => {
             const { drawer, transform, overlay } = styles(interpolated, this.props);
 
+            let computedStyle = extend(drawer, drawerStyle);
+            if (interpolated.val > 0) computedStyle.display = 'block';
+            else computedStyle.display = 'none';
+
             return (
               <Hammer style={transform}
                 onPress={this.onPress.bind(this)}
                 onPressUp={this.onPressUp.bind(this)}
                 onPan={this.onPan.bind(this)} vertical={false}>
 
-                { interpolated.val > 0 &&
-                  <div className={className} style={extend(drawer, drawerStyle)}>
-                    { isFunction( children )?
-                      children(interpolated)
-                      : children }
-                  </div> }
+                <div className={className} style={computedStyle}>
+                  { isFunction( children )?
+                    children(interpolated)
+                    : children }
+                </div>
 
                 { !this.isClosed() &&
                   <Hammer style={overlay} className={overlayClassName} onTap={this.onOverlayTap.bind(this)} /> }
