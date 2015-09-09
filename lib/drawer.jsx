@@ -2,6 +2,7 @@ import { Component, PropTypes } from 'react';
 import { Spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
 import extend from '1-liners/extend';
+import isFunction from '1-liners/isFunction';
 import styles from './styles';
 
 const { bool, number, array, object, string, func } = PropTypes;
@@ -144,7 +145,7 @@ export default class Drawer extends Component {
   }
 
   render() {
-    const { config, drawerStyle, className, overlayClassName, width } = this.props;
+    const { config, drawerStyle, className, overlayClassName, width, children } = this.props;
     const { currentState, x } = this.state;
 
     return (
@@ -160,7 +161,9 @@ export default class Drawer extends Component {
 
                 { interpolated.val > 0 &&
                   <div className={className} style={extend(drawer, drawerStyle)}>
-                    { this.props.children }
+                    { isFunction( children )?
+                      children(interpolated)
+                      : children }
                   </div> }
 
                 { !this.isClosed() &&
