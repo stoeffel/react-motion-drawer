@@ -10,6 +10,7 @@ const { bool, number, array, object, string, func } = PropTypes;
 export default class Drawer extends Component {
 
   static propTypes = {
+    zIndex: number,           // z-index of the drawer default is 10000
     noTouchOpen: bool,        // can a user pan to open
     noTouchClose: bool,       // can a user pan to close
     onChange: func,           // called when the drawer is open
@@ -28,6 +29,7 @@ export default class Drawer extends Component {
   };
 
   static defaultProps = {
+    zIndex: 10000,
     noTouchOpen: false,
     noTouchClose: false,
     onChange: () => {},
