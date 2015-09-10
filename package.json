@@ -1,6 +1,6 @@
 {
   "name": "react-motion-drawer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
     "build": "babel lib --out-dir ./",
