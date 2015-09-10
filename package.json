@@ -5,6 +5,7 @@
   "scripts": {
     "build": "babel lib --out-dir ./",
     "serve": "node example/server.js",
+    "open": "opn http://localhost:9999/example/index.html",
     "lint": "eslint lib",
     "patch-release": "npm run build && npm version patch && npm publish && git push --follow-tags",
     "minor-release": "npm run build && npm version minor && npm publish && git push --follow-tags",
@@ -36,6 +37,7 @@
     "babel-eslint": "^3.1.9",
     "babel-loader": "^5.1.2",
     "eslint-plugin-react": "^2.3.0",
+    "opn-cli": "^1.0.0",
     "react": "^0.13.0",
     "react-hot-loader": "^1.2.7",
     "webpack": "^1.9.6",

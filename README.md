@@ -4,6 +4,14 @@ react-motion-drawer :warning: WIP :warning:
 > Navigation drawer built with the awesome [react-motion][rm] by [@chenglou][c] and [react-hammerjs][rh] by [@JedWatson][j]
 
 
+## Example
+
+To run the example locally, run:
+```bash
+$ npm install
+$ npm run serve
+$ npm run open
+```
 
 ## Usage
 
