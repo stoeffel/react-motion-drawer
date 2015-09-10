@@ -1,13 +1,13 @@
-import { Component, PropTypes } from 'react';
+import React from 'react';
 import { Spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
 import extend from '1-liners/extend';
 import isFunction from '1-liners/isFunction';
 import styles from './styles';
 
-const { bool, number, array, object, string, func } = PropTypes;
+const { bool, number, array, object, string, func } = React.PropTypes;
 
-export default class Drawer extends Component {
+export default class Drawer extends React.Component {
 
   static propTypes = {
     zIndex: number,           // z-index of the drawer default is 10000
