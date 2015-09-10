@@ -10,7 +10,7 @@ To run the example locally, run:
 ```bash
 $ npm install
 $ npm run serve
-$ npm run open
+$ npm run open # or open http://localhost:9999/example/index.html in your browser
 ```
 
 ## Usage
