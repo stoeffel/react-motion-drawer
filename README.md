@@ -23,7 +23,25 @@ import Drawer from 'react-motion-drawer';
   <Drawer open={false} onChange={onChange}>
     <ul>
       <li>Home</li>
-      <li>Home</li>
+      <li>About</li>
+      <li>Settings</li>
+    </ul>
+  </Drawer>
+```
+
+### Hooking into the animation
+
+You can hook into the animation by passing a function as the child component.
+
+```jsx
+  <Drawer open={false} width={300} onChange={onChange}>
+    { ({ val }) =>
+      <ul style={{ opacity: 300 / val }}>
+        <li>Home</li>
+        <li>About</li>
+        <li>Settings</li>
+      </ul>
+    }
   </Drawer>
 ```
 
