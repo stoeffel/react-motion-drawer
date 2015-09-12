@@ -21,7 +21,9 @@ import Drawer from 'react-motion-drawer';
 
 ```jsx
   <Drawer open={false} onChange={onChange}>
-    {/* your content */}
+    <ul>
+      <li>Home</li>
+      <li>Home</li>
   </Drawer>
 ```
 
