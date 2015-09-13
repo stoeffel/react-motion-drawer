@@ -1,7 +1,7 @@
 {
   "name": "react-motion-drawer",
   "version": "0.0.7",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
   "scripts": {
     "build": "babel lib --out-dir ./",
     "serve": "node example/server.js",
@@ -23,8 +23,11 @@
   "keywords": [
     "react",
     "reactjs",
-    "motion",
-    "drawer"
+    "react-motion",
+    "react-hammerjs",
+    "touch",
+    "drawer",
+    "navigation"
   ],
   "author": "Christoph Hermann <schtoeffel@gmail.com> (http://github.com/stoeffel)",
   "license": "MIT",
