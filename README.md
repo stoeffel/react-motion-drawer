@@ -1,10 +1,15 @@
-![react-motion-drawer](./drawer.gif)
+<h1 align="center">react-motion-drawer</h1>
 
-react-motion-drawer
-=====================
+<p align="center">
+  
+  <a href="#example">Example</a> |
+  <a href="#usage">Usage</a> |
+  <a href="#api">API</a>
+  <br><br>
+  <img  align="center" src="./drawer.gif">
+</p>
 
 > Navigation drawer built with the awesome [react-motion][rm] by [@chenglou][c] and [react-hammerjs][rh] by [@JedWatson][j]
-
 
 ## Example
 
