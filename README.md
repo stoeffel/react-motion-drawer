@@ -36,6 +36,14 @@ import Drawer from 'react-motion-drawer';
   </Drawer>
 ```
 
+If you want the drawer on the right side of the screen you need the following css.
+
+```css
+  body {
+    overflow: hidden;
+  }
+```
+
 ### Hooking into the animation
 
 You can hook into the animation by passing a function as the child component.

@@ -32,6 +32,11 @@ export default class App extends Component {
       </Drawer> }
       { !openLeft &&
       <Drawer right={true} {...drawerProps} open={openRight} onChange={open => this.setState({ openRight: open})}>
+        {({val}) => {
+          var per = val/ 300;
+          return <div style={{ backgroundColor: `rgba(0, 184, 212, ${per})`, width: '100%', height: '100%' }} />;
+          }
+        }
       </Drawer> }
       <div className="navbar-fixed">
       <nav>
