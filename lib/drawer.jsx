@@ -5,7 +5,7 @@ import extend from '1-liners/extend';
 import isFunction from '1-liners/isFunction';
 import styles from './styles';
 
-const { bool, number, array, object, string, func } = React.PropTypes;
+const { bool, number, array, object, string, func, oneOfType } = React.PropTypes;
 
 export default class Drawer extends React.Component {
 
@@ -15,12 +15,12 @@ export default class Drawer extends React.Component {
     noTouchClose: bool,       // can a user pan to close
     onChange: func,           // called when the drawer is open
     drawerStyle: object,      // additional drawer styles
-    className: object,        // additional drawer className
-    overlayClassName: object, // additional overlay className
+    className: string,        // additional drawer className
+    overlayClassName: string, // additional overlay className
     config: array,            // configuration of the react-motion animation
     open: bool,               // states if the drawer is open
     width: number,            // width of the drawer
-    height: number,           // height of the drawer
+    height: oneOfType([number, string]),  // height of the drawer
     handleWidth: number,      // width of the handle
     peakingWidth: number,     // width that the drawer peaks on press
     panTolerance: number,     // tolerance until the drawer starts to move
