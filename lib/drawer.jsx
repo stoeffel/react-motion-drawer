@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spring } from 'react-motion';
+import { Motion, spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
 import extend from '1-liners/extend';
 import isFunction from '1-liners/isFunction';
@@ -158,12 +158,13 @@ export default class Drawer extends React.Component {
     const { currentState, x } = this.state;
 
     return (
-        <Spring endValue={{val: x, config: config}}>
+        <Motion style={{ myProp: spring(x || 0 ,config) }}>
           {interpolated => {
-            const { drawer, transform, overlay } = styles(interpolated, this.props);
+                             console.log(interpolated.myProp)
+            const { drawer, transform, overlay } = styles(interpolated.myProp, this.props);
 
             let computedStyle = extend(drawer, drawerStyle);
-            if (interpolated.val > 0) computedStyle.display = 'block';
+            if (interpolated.myProp > 0) computedStyle.display = 'block';
             else computedStyle.display = 'none';
 
             return (
@@ -174,7 +175,7 @@ export default class Drawer extends React.Component {
 
                 <div className={className} style={computedStyle}>
                   { isFunction( children )?
-                    children(interpolated)
+                    children(interpolated.myProp)
                     : children }
                 </div>
 
@@ -183,7 +184,7 @@ export default class Drawer extends React.Component {
               </Hammer>
               );}
           }
-        </Spring>
+        </Motion>
     );
   }
 }

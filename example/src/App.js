@@ -15,7 +15,7 @@ export default class App extends Component {
   render() {
     const { openLeft, openRight } = this.state;
     const drawerProps = {
-      overlayColor: 'rgba(255,255,255,0.4)',
+      overlayColor: 'rgba(255,255,255,0.6)',
       drawerStyle: style
     };
 
@@ -32,7 +32,7 @@ export default class App extends Component {
       </Drawer> }
       { !openLeft &&
       <Drawer right={true} {...drawerProps} open={openRight} onChange={open => this.setState({ openRight: open})}>
-        {({val}) => {
+        {val => {
           var per = val/ 300;
           return <div style={{ backgroundColor: `rgba(0, 184, 212, ${per})`, width: '100%', height: '100%' }} />;
           }

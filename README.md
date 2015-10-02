@@ -50,7 +50,7 @@ You can hook into the animation by passing a function as the child component.
 
 ```jsx
   <Drawer open={false} width={300} onChange={onChange}>
-    { ({ val }) =>
+    { val =>
       <ul style={{ opacity: 300 / val }}>
         <li>Home</li>
         <li>About</li>
