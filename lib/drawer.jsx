@@ -160,7 +160,6 @@ export default class Drawer extends React.Component {
     return (
         <Motion style={{ myProp: spring(x || 0 ,config) }}>
           {interpolated => {
-                             console.log(interpolated.myProp)
             const { drawer, transform, overlay } = styles(interpolated.myProp, this.props);
 
             let computedStyle = extend(drawer, drawerStyle);
