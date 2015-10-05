@@ -22,7 +22,7 @@ export default class App extends Component {
     return (
       <div>
       { !openRight &&
-      <Drawer {...drawerProps} open={openLeft} onChange={open => this.setState({ openLeft: open})}>
+      <Drawer {...drawerProps} fadeOut={true} open={openLeft} onChange={open => this.setState({ openLeft: open})}>
         <div style={{ width: '100%' }}>
           <img src="../media/planurahuette.jpg"/>
         </div>

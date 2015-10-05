@@ -80,6 +80,8 @@ You can hook into the animation by passing a function as the child component.
 * `panTolerance: number`     - tolerance until the drawer starts to move (default `50`)
 * `right: bool`              - drawer on the right side of the screen (default `false`)
 * `overlayColor: string`     - color of the overlay (default `rgba(0, 0, 0, 0.4)`)
+* `fadeOut: bool`            - fade out (default `false`)
+* `offset: number`           - offset of the drawer (default `0`)
 
 
 

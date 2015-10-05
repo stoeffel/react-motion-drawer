@@ -26,6 +26,8 @@ export default class Drawer extends React.Component {
     panTolerance: number,     // tolerance until the drawer starts to move
     right: bool,              // drawer on the right side of the screen
     overlayColor: string,     // color of the overlay
+    fadeOut: bool,            // fade out
+    offset: number,           // offset
   };
 
   static defaultProps = {
@@ -42,6 +44,8 @@ export default class Drawer extends React.Component {
     peakingWidth: 50,
     panTolerance: 50,
     right: false,
+    fadeOut: false,
+    offset: 0,
   };
 
   componentWillReceiveProps(nextProps) {
@@ -154,11 +158,11 @@ export default class Drawer extends React.Component {
   }
 
   render() {
-    const { config, drawerStyle, className, overlayClassName, width, children } = this.props;
+    const { config, drawerStyle, className, overlayClassName, width, children, offset } = this.props;
     const { currentState, x } = this.state;
 
     return (
-        <Motion style={{ myProp: spring(x || 0 ,config) }}>
+        <Motion style={{ myProp: spring(x + offset || 0 ,config) }}>
           {interpolated => {
             const { drawer, transform, overlay } = styles(interpolated.myProp, this.props);
 
