@@ -171,20 +171,22 @@ export default class Drawer extends React.Component {
             else computedStyle.display = 'none';
 
             return (
-              <Hammer style={transform}
-                onPress={this.onPress.bind(this)}
-                onPressUp={this.onPressUp.bind(this)}
-                onPan={this.onPan.bind(this)} vertical={false}>
+              <div style={transform}>
+                <Hammer
+                  onPress={this.onPress.bind(this)}
+                  onPressUp={this.onPressUp.bind(this)}
+                  onPan={this.onPan.bind(this)} vertical={false}>
 
-                <div className={className} style={computedStyle}>
-                  { isFunction( children )?
-                    children(interpolated.myProp)
-                    : children }
-                </div>
+                    <div className={className} style={computedStyle}>
+                      { isFunction( children )?
+                        children(interpolated.myProp)
+                        : children }
 
-                { !this.isClosed() &&
-                  <Hammer style={overlay} className={overlayClassName} onTap={this.onOverlayTap.bind(this)} /> }
-              </Hammer>
+                    { !this.isClosed() &&
+                      <Hammer style={overlay} className={overlayClassName} onTap={this.onOverlayTap.bind(this)}><span></span></Hammer> }
+                    </div>
+                </Hammer>
+              </div>
               );}
           }
         </Motion>
