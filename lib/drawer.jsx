@@ -1,7 +1,7 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
-import extend from '1-liners/extend';
+import assign from '1-liners/assign';
 import isFunction from '1-liners/isFunction';
 import styles from './styles';
 
@@ -166,7 +166,7 @@ export default class Drawer extends React.Component {
           {interpolated => {
             const { drawer, transform, overlay } = styles(interpolated.myProp, this.props);
 
-            let computedStyle = extend(drawer, drawerStyle);
+            let computedStyle = assign(drawer, drawerStyle);
             if (interpolated.myProp > 0) computedStyle.display = 'block';
             else computedStyle.display = 'none';
 
