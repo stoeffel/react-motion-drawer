@@ -9,11 +9,11 @@
   "dependencies": {
     "1-liners": "^0.4.0",
     "react-hammerjs": "^0.5.0",
-    "react-motion": "^0.4.6"
+    "react-motion": "^0.4.7"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-core": "^6.20.0",
+    "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
