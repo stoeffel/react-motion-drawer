@@ -1,59 +1,55 @@
 {
   "name": "react-motion-drawer",
+  "version": "3.0.0",
   "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
-  "version": "2.1.0",
-  "author": "Christoph Hermann <schtoeffel@gmail.com> (http://github.com/stoeffel)",
-  "bugs": {
-    "url": "https://github.com/stoeffel/react-motion-drawer/issues"
+  "scripts": {
+    "build": "babel lib --out-dir ./",
+    "serve": "node example/server.js",
+    "open": "opn http://localhost:8888/example/index.html",
+    "lint": "eslint lib",
+    "patch-release": "npm run build && npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm run build && npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm run build && npm version major && npm publish && git push --follow-tags"
   },
-  "dependencies": {
-    "1-liners": "^0.4.0",
-    "react-hammerjs": "^0.5.0",
-    "react-motion": "^0.4.7"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.21.0",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "eslint-plugin-react": "^6.8.0",
-    "opn-cli": "^3.1.0",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-hot-loader": "^1.3.0",
-    "webpack": "^1.9.6",
-    "webpack-dev-server": "^1.8.2"
-  },
+  "main": "./drawer.js",
   "files": [
     "drawer.js",
     "styles.js"
   ],
-  "homepage": "https://github.com/stoeffel/react-motion-drawer",
-  "keywords": [
-    "drawer",
-    "navigation",
-    "react",
-    "react-hammerjs",
-    "react-motion",
-    "reactjs",
-    "touch"
-  ],
-  "license": "MIT",
-  "main": "./drawer.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/stoeffel/react-motion-drawer.git"
   },
-  "scripts": {
-    "build": "babel lib --out-dir ./",
-    "lint": "eslint lib",
-    "major-release": "npm run build && npm version major && npm publish && git push --follow-tags",
-    "minor-release": "npm run build && npm version minor && npm publish && git push --follow-tags",
-    "open": "opn http://localhost:8888/example/index.html",
-    "patch-release": "npm run build && npm version patch && npm publish && git push --follow-tags",
-    "serve": "node example/server.js"
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-motion",
+    "react-hammerjs",
+    "touch",
+    "drawer",
+    "navigation"
+  ],
+  "author": "Christoph Hermann <schtoeffel@gmail.com> (http://github.com/stoeffel)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stoeffel/react-motion-drawer/issues"
+  },
+  "homepage": "https://github.com/stoeffel/react-motion-drawer",
+  "devDependencies": {
+    "babel-core": "^5.4.7",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.1.2",
+    "eslint-plugin-react": "^3.6.3",
+    "opn-cli": "^1.0.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.8.2"
+  },
+  "dependencies": {
+    "1-liners": "^0.3.5",
+    "react-hammerjs": "^0.4.0",
+    "react-motion": "^0.3.0"
   }
 }
