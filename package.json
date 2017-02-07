@@ -1,5 +1,5 @@
 {
-  "name": "react-motion-drawer-temp-fork",
+  "name": "react-motion-drawer",
   "version": "2.1.2",
   "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
   "scripts": {
@@ -36,9 +36,12 @@
   },
   "homepage": "https://github.com/stoeffel/react-motion-drawer",
   "devDependencies": {
-    "babel-core": "^6.21.0",
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-react": "^6.22.0",
     "eslint-plugin-react": "^3.6.3",
     "opn-cli": "^1.0.0",
     "react": "^15.4.2",
@@ -49,6 +52,7 @@
   },
   "dependencies": {
     "1-liners": "^0.4.0",
+    "babel-preset-stage-0": "^6.22.0",
     "react-hammerjs": "^0.5.0",
     "react-motion": "^0.4.7"
   }
