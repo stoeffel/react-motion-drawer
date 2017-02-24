@@ -11,8 +11,14 @@ export default class App extends Component {
     openLeft: false,
     openRight: false,
     relativeWidth: false,
+    width: 300
   };
 
+  setWidth = (e) => {
+    this.setState({
+      width: Number(e.target.value) || e.target.value),
+    });
+  }
   render() {
     const { openLeft, openRight } = this.state;
     const drawerProps = {
@@ -23,7 +29,7 @@ export default class App extends Component {
     return (
       <div>
       { !openRight &&
-      <Drawer {...drawerProps} width={this.state.relativeWidth ? '50%' : 300} fadeOut={true} open={openLeft} onChange={open => this.setState({ openLeft: open})}>
+      <Drawer {...drawerProps} width={this.state.width} fadeOut={true} open={openLeft} onChange={open => this.setState({ openLeft: open})}>
         <div style={{ width: '100%' }}>
           <img src="../media/planurahuette.jpg"/>
         </div>
@@ -32,7 +38,7 @@ export default class App extends Component {
          </div>
       </Drawer> }
       { !openLeft &&
-      <Drawer right={true} width={this.state.relativeWidth ? '50vw' : 300} {...drawerProps} open={openRight} onChange={open => this.setState({ openRight: open})}>
+      <Drawer right={true} width={this.state.width} {...drawerProps} open={openRight} onChange={open => this.setState({ openRight: open})}>
         {val => {
           var per = val/ 300;
           return <div style={{ backgroundColor: `rgba(0, 184, 212, ${per})`, width: '100%', height: '100%' }} />;
@@ -61,10 +67,10 @@ export default class App extends Component {
       </nav>
       </div>
       <div className="options">
-        <form>
-          <p>
-            <input type="checkbox" id="relative_width" onChange={()=>this.setState({relativeWidth: !this.state.relativeWidth})}/>
-            <label htmlFor="relative_width">Relative width</label>
+        <form className="row">
+          <p className="col s4">
+            <label htmlFor="width">Set width</label>
+            <input id="width" type="text" onChange={this.setWidth} value={this.state.width} />
           </p>
         </form>
       </div>
