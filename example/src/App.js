@@ -9,7 +9,8 @@ const style = {
 export default class App extends Component {
   state = {
     openLeft: false,
-    openRight: false
+    openRight: false,
+    relativeWidth: false,
   };
 
   render() {
@@ -22,7 +23,7 @@ export default class App extends Component {
     return (
       <div>
       { !openRight &&
-      <Drawer {...drawerProps} fadeOut={true} open={openLeft} onChange={open => this.setState({ openLeft: open})}>
+      <Drawer {...drawerProps} width={this.state.relativeWidth ? '50%' : 300} fadeOut={true} open={openLeft} onChange={open => this.setState({ openLeft: open})}>
         <div style={{ width: '100%' }}>
           <img src="../media/planurahuette.jpg"/>
         </div>
@@ -31,7 +32,7 @@ export default class App extends Component {
          </div>
       </Drawer> }
       { !openLeft &&
-      <Drawer right={true} {...drawerProps} open={openRight} onChange={open => this.setState({ openRight: open})}>
+      <Drawer right={true} width={this.state.relativeWidth ? '50vw' : 300} {...drawerProps} open={openRight} onChange={open => this.setState({ openRight: open})}>
         {val => {
           var per = val/ 300;
           return <div style={{ backgroundColor: `rgba(0, 184, 212, ${per})`, width: '100%', height: '100%' }} />;
@@ -44,9 +45,9 @@ export default class App extends Component {
           <a href="#" className="brand-logo center">rm-drawer</a>
           <ul className="left">
             <li style={{ cursor: 'pointer', height: '100%' }}>
-            <a style={{ padding: 15}} className='' onClick={()=>this.setState({openLeft:!openLeft, openRight: false})}>
-              <i className="fa fa-bars"></i>
-            </a>
+              <a style={{ padding: 15}} className='' onClick={()=>this.setState({openLeft:!openLeft, openRight: false})}>
+                <i className="fa fa-bars"></i>
+              </a>
             </li>
           </ul>
           <ul className="right">
@@ -59,7 +60,15 @@ export default class App extends Component {
         </div>
       </nav>
       </div>
+      <div className="options">
+        <form>
+          <p>
+            <input type="checkbox" id="relative_width" onChange={()=>this.setState({relativeWidth: !this.state.relativeWidth})}/>
+            <label htmlFor="relative_width">Relative width</label>
+          </p>
+        </form>
       </div>
+    </div>
     );
   }
 }
