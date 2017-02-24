@@ -16,7 +16,7 @@ export default class App extends Component {
 
   setWidth = (e) => {
     this.setState({
-      width: Number(e.target.value) || e.target.value),
+      width: Number(e.target.value) || e.target.value,
     });
   }
   render() {
