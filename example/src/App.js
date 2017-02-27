@@ -1,5 +1,6 @@
 import Drawer from '../../lib/drawer.jsx';
 import React, { Component } from 'react';
+import image from 'url-loader!../planurahuette.jpg'
 
 const style = {
   background: '#F9F9F9',
@@ -31,7 +32,7 @@ export default class App extends Component {
       { !openRight &&
       <Drawer {...drawerProps} width={this.state.width} fadeOut={true} open={openLeft} onChange={open => this.setState({ openLeft: open})}>
         <div style={{ width: '100%' }}>
-          <img src="../media/planurahuette.jpg"/>
+          <img src={image}/>
         </div>
         <div style={{ padding: '2em' }}>
           <h3>Navigation</h3>
