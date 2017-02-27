@@ -4,6 +4,7 @@
   "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
   "scripts": {
     "build": "babel lib --out-dir ./",
+    "build-example": "webpack --config example/webpack.config.js",
     "serve": "node example/server.js",
     "open": "opn http://localhost:8888/example/index.html",
     "lint": "eslint lib",
