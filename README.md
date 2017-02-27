@@ -11,6 +11,8 @@
 
 > Navigation drawer built with the awesome [react-motion][rm] by [@chenglou][c] and [react-hammerjs][rh] by [@JedWatson][j]
 
+[![npm version](https://badge.fury.io/js/react-motion-drawer.svg)](https://badge.fury.io/js/react-motion-drawer)
+
 ## Example
 
 To run the example locally, run:
