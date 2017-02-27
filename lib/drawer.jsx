@@ -26,7 +26,7 @@ export default class Drawer extends React.Component {
     overlayClassName: string, // additional overlay className
     config: array, // configuration of the react-motion animation
     open: bool, // states if the drawer is open
-    width: number, // width of the drawer
+    width: oneOfType([number, string]), // width of the drawer
     height: oneOfType([number, string]), // height of the drawer
     handleWidth: number, // width of the handle
     peakingWidth: number, // width that the drawer peaks on press
@@ -66,7 +66,7 @@ export default class Drawer extends React.Component {
   }
 
   state = {
-    currentState: "CLOSED"
+    currentState: "CLOSED",
   };
 
   isState(s) {
@@ -110,7 +110,8 @@ export default class Drawer extends React.Component {
   open() {
     const { onChange, width } = this.props;
     onChange(true);
-    return this.setState({ currentState: "OPEN", x: width });
+
+    return this.setState({ currentState: "OPEN", x: this.calculateWidth() });
   }
 
   isClosingDirection(direction) {
@@ -147,7 +148,8 @@ export default class Drawer extends React.Component {
     }
 
     const { currentState } = this.state;
-    const { right, peakingWidth, width, handleWidth } = this.props;
+    const { right, peakingWidth, handleWidth } = this.props;
+    const { width } = this.calculateWidth();
     const { clientX } = pointers[0];
 
     let x = right ? document.body.clientWidth - clientX : clientX;
@@ -172,6 +174,11 @@ export default class Drawer extends React.Component {
   onOverlayTap(e) {
     e.preventDefault();
     if (this.isOpen()) this.close();
+  }
+
+  calculateWidth(){
+    const width = this.props.width;
+    return /\D/.test(width) ? document.body.clientWidth * (width.match(/\d*/) / 100) : width;
   }
 
   render() {
@@ -206,7 +213,6 @@ export default class Drawer extends React.Component {
                 onPan={this.onPan.bind(this)}
                 vertical={false}
               >
-
                 <div className={className} style={computedStyle}>
                   {isFunction(children)
                     ? children(interpolated.myProp)
