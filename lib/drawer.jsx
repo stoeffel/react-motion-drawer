@@ -66,7 +66,7 @@ export default class Drawer extends React.Component {
   }
 
   state = {
-    currentState: "CLOSED",
+    currentState: "CLOSED"
   };
 
   isState(s) {
@@ -176,9 +176,11 @@ export default class Drawer extends React.Component {
     if (this.isOpen()) this.close();
   }
 
-  calculateWidth(){
+  calculateWidth() {
     const width = this.props.width;
-    return /\D/.test(width) ? document.body.clientWidth * (width.match(/\d*/) / 100) : width;
+    return /\D/.test(width)
+      ? document.body.clientWidth * (width.match(/\d*/) / 100)
+      : width;
   }
 
   render() {
