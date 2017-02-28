@@ -118,7 +118,7 @@ export default class Drawer extends React.Component {
     this.peak();
   }
 
-  conPressUp = (e) => {
+  onPressUp = (e) => {
     e.preventDefault();
     this.close();
   }
