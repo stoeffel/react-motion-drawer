@@ -69,32 +69,11 @@ export default class Drawer extends React.Component {
     currentState: "CLOSED"
   };
 
-  isState(s) {
-    return s === this.state.currentState;
-  }
-  isClosed() {
-    return this.isState("CLOSED");
-  }
-  isOpen() {
-    return this.isState("OPEN");
-  }
-  isOpening() {
-    return this.isState("IS_OPENING");
-  }
-  isClosing() {
-    return this.isState("IS_CLOSING");
-  }
-
-  onPress(e) {
-    if (this.props.noTouchOpen) return;
-    e.preventDefault();
-    this.peak();
-  }
-
-  onPressUp(e) {
-    e.preventDefault();
-    this.close();
-  }
+  isState = (s) => s === this.state.currentState;
+  isClosed = () => this.isState("CLOSED");
+  isOpen = () => this.isState("OPEN");
+  isOpening = () => this.isState("IS_OPENING");
+  isClosing = () => this.isState("IS_CLOSING");
 
   peak() {
     const { onChange, handleWidth } = this.props;
@@ -133,7 +112,18 @@ export default class Drawer extends React.Component {
     return Math.abs(deltaX) <= panTolerance && currentState === "OPEN";
   }
 
-  onPan(e) {
+  onPress = (e) => {
+    if (this.props.noTouchOpen) return;
+    e.preventDefault();
+    this.peak();
+  }
+
+  conPressUp = (e) => {
+    e.preventDefault();
+    this.close();
+  }
+
+  onPan = (e) => {
     if (this.isClosed() && this.props.noTouchOpen) return;
     if (this.isOpen() && this.props.noTouchClose) return;
     e.preventDefault();
@@ -171,12 +161,12 @@ export default class Drawer extends React.Component {
     });
   }
 
-  onOverlayTap(e) {
+  onOverlayTap = (e) => {
     e.preventDefault();
     if (this.isOpen()) this.close();
   }
 
-  calculateWidth() {
+  calculateWidth = () => {
     const width = this.props.width;
     return /\D/.test(width)
       ? document.body.clientWidth * (width.match(/\d*/) / 100)
@@ -210,9 +200,9 @@ export default class Drawer extends React.Component {
           return (
             <div style={transform}>
               <Hammer
-                onPress={this.onPress.bind(this)}
-                onPressUp={this.onPressUp.bind(this)}
-                onPan={this.onPan.bind(this)}
+                onPress={this.onPress}
+                onPressUp={this.onPressUp}
+                onPan={this.onPan}
                 direction={Hammer.DIRECTION_HORIZONTAL}
               >
                 <div className={className} style={computedStyle}>
@@ -224,7 +214,7 @@ export default class Drawer extends React.Component {
                     <Hammer
                       style={overlay}
                       className={overlayClassName}
-                      onTap={this.onOverlayTap.bind(this)}
+                      onTap={this.onOverlayTap}
                     >
                       <span />
                     </Hammer>}
