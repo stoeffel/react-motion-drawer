@@ -43,6 +43,7 @@
     "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.1.10",
     "babel-preset-react": "^6.23.0",
+    "eslint": "^3.6.3",
     "eslint-plugin-react": "^3.6.3",
     "file-loader": "^0.10.1",
     "opn-cli": "^1.0.0",
