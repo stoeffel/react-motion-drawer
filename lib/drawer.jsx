@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Motion, spring } from "react-motion";
 import Hammer from "react-hammerjs";
 import assign from "1-liners/assign";
@@ -13,7 +14,7 @@ const {
   string,
   func,
   oneOfType
-} = React.PropTypes;
+} = PropTypes;
 
 export default class Drawer extends React.Component {
   static propTypes = {
