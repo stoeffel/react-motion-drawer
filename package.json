@@ -57,6 +57,7 @@
   "dependencies": {
     "1-liners": "^0.4.0",
     "babel-preset-stage-0": "^6.22.0",
+    "prop-types": "^15.5.10",
     "react-hammerjs": "^0.5.0",
     "react-motion": "^0.4.7"
   }
