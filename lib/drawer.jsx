@@ -186,7 +186,7 @@ export default class Drawer extends React.Component {
     const { currentState, x } = this.state;
 
     return (
-      <Motion style={{ myProp: spring(x + offset || 0, config) }}>
+      <Motion style={{ myProp: spring(Math.min(x + offset || 0, this.calculateWidth()), config) }}>
         {interpolated => {
           const { drawer, transform, overlay } = styles(
             interpolated.myProp,
