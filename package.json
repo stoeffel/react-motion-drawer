@@ -1,6 +1,6 @@
 {
   "name": "react-motion-drawer",
-  "version": "3.0.0",
+  "version": "2.1.7",
   "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
   "scripts": {
     "build": "babel lib --out-dir ./",
@@ -36,6 +36,9 @@
     "url": "https://github.com/stoeffel/react-motion-drawer/issues"
   },
   "homepage": "https://github.com/stoeffel/react-motion-drawer",
+  "peerDependencies": {
+    "react": "^15.4.2 || ^16.0.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
