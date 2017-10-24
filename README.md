@@ -4,7 +4,8 @@
 
   <a href="#example">Example</a> |
   <a href="#usage">Usage</a> |
-  <a href="#api">API</a>
+  <a href="#api">API</a> |
+  <a href="CHANGELOG.md">Changelog</a>
   <br><br>
   <img  align="center" src="./media/drawer.gif">
 </p>
@@ -84,8 +85,6 @@ You can hook into the animation by passing a function as the child component.
 * `overlayColor: string`     - color of the overlay (default `rgba(0, 0, 0, 0.4)`)
 * `fadeOut: bool`            - fade out (default `false`)
 * `offset: number`           - offset of the drawer (default `0`)
-
-## [Changelog](CHANGELOG.md)
 
 ## License
 
