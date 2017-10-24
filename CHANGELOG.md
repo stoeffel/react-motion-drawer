@@ -10,4 +10,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added a changelog!
 
 ### Fixed
-- #34 I can drag drawer anywhere on the screen (PR #35) - @timurridjanovic
+- [#34](https://github.com/stoeffel/react-motion-drawer/issues/34) I can drag drawer anywhere on the screen (PR [#35](https://github.com/stoeffel/react-motion-drawer/pull/35)) - @timurridjanovic
