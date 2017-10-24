@@ -85,7 +85,7 @@ You can hook into the animation by passing a function as the child component.
 * `fadeOut: bool`            - fade out (default `false`)
 * `offset: number`           - offset of the drawer (default `0`)
 
-
+## [Changelog](CHANGELOG.md)
 
 ## License
 
