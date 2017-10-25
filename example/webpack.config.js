@@ -4,32 +4,34 @@ var webpack = require("webpack");
 module.exports = {
   devtool: "eval",
   entry: [
-    "webpack-dev-server/client?http://localhost:8888",
-    "webpack/hot/only-dev-server",
-    "./example/src/index"
+    './example/src/index.js',
   ],
   output: {
     path: path.join(__dirname, "static"),
     filename: "bundle.js",
-    publicPath: "/static/"
+    publicPath: "/static/",
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
-  resolve: {
-    extensions: ["", ".js", ".jsx"]
-  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        loaders: ["react-hot", "babel"],
-        include: [
-          path.join(__dirname, "src"),
-          path.join(__dirname, "..", "lib")
-        ]
-      }
-    ]
+        exclude: /node_modules/,
+        use: [
+          "babel-loader",
+        ],
+      },
+    ],
+  },
+  devServer: {
+    contentBase: __dirname,
+    compress: true,
+    hot: true,
+    port: 8888
   }
 };
