@@ -1,11 +1,11 @@
 {
   "name": "react-motion-drawer",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
   "scripts": {
     "build": "babel lib --out-dir ./",
     "build-example": "webpack --config example/webpack.config.js",
-    "serve": "node example/server.js",
+    "serve": "webpack-dev-server --config example/webpack.config.js",
     "open": "opn http://localhost:8888/example/index.html",
     "lint": "eslint lib",
     "patch-release": "npm run build && npm version patch && npm publish && git push --follow-tags",
@@ -36,29 +36,31 @@
     "url": "https://github.com/stoeffel/react-motion-drawer/issues"
   },
   "homepage": "https://github.com/stoeffel/react-motion-drawer",
+  "peerDependencies": {
+    "react": "^15.4.2 || ^16.0.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.3.2",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.1.10",
     "babel-preset-react": "^6.23.0",
-    "eslint": "^3.6.3",
-    "eslint-plugin-react": "^3.6.3",
-    "file-loader": "^0.10.1",
-    "opn-cli": "^1.0.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-hot-loader": "^1.3.0",
-    "url-loader": "^0.5.8",
-    "webpack": "^1.9.6",
-    "webpack-dev-server": "^1.8.2"
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "file-loader": "^1.1.5",
+    "opn-cli": "^3.1.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
     "1-liners": "^0.4.0",
-    "babel-preset-stage-0": "^6.22.0",
     "prop-types": "^15.5.10",
-    "react-hammerjs": "^0.5.0",
-    "react-motion": "^0.4.7"
+    "react-hammerjs": "^1.0.1",
+    "react-motion": "^0.5.2"
   }
 }

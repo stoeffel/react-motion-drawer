@@ -20,9 +20,8 @@ A live demo is available [here](https://react-motion-drawer.netlify.com/)!
 
 To run the example locally, run:
 ```bash
-$ npm install
-$ npm run serve
-$ npm run open # or open http://localhost:8888/example/index.html in your browser
+$ yarn
+$ yarn serve
 ```
 
 ## Usage
