@@ -24,6 +24,13 @@ $ yarn
 $ yarn serve
 ```
 
+## Installation
+
+Via npm:
+```
+npm install react-motion-drawer
+```
+
 ## Usage
 
 ```js
