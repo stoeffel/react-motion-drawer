@@ -199,13 +199,13 @@ export default class Drawer extends React.Component {
           else computedStyle.display = "none";
 
           return (
-            <div style={transform}>
-              <Hammer
-                onPress={this.onPress}
-                onPressUp={this.onPressUp}
-                onPan={this.onPan}
-                direction={Hammer.DIRECTION_HORIZONTAL}
-              >
+            <Hammer
+              onPress={this.onPress}
+              onPressUp={this.onPressUp}
+              onPan={this.onPan}
+              direction={Hammer.DIRECTION_HORIZONTAL}
+            >
+              <div style={transform}>
                 <div className={className} style={computedStyle}>
                   {isFunction(children)
                     ? children(interpolated.myProp)
@@ -220,8 +220,8 @@ export default class Drawer extends React.Component {
                       <span />
                     </Hammer>}
                 </div>
-              </Hammer>
-            </div>
+              </div>
+            </Hammer>
           );
         }}
       </Motion>
