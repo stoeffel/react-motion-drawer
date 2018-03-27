@@ -82,7 +82,7 @@ You can hook into the animation by passing a function as the child component.
 * `drawerStyle: object`      - additional drawer styles
 * `className: object`        - additional drawer className
 * `overlayClassName: object` - additional overlay className
-* `config: array`            - configuration of the react-motion animation (default `[350, 40]`)
+* `config: object`           - configuration of the react-motion animation (default `{stiffness: 350, damping: 40}`)
 * `open: bool`               - states if the drawer is open (default `false`)
 * `width: number`            - width of the drawer (default `300`)
 * `height: number`           - height of the drawer (default `'100%'`)
