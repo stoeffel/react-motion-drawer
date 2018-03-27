@@ -25,7 +25,11 @@ export default class Drawer extends React.Component {
     drawerStyle: object, // additional drawer styles
     className: string, // additional drawer className
     overlayClassName: string, // additional overlay className
-    config: array, // configuration of the react-motion animation
+    config: PropTypes.shape({
+      stiffness: number,
+      damping: number,
+      precision: number
+    }), // configuration of the react-motion animation
     open: bool, // states if the drawer is open
     width: oneOfType([number, string]), // width of the drawer
     height: oneOfType([number, string]), // height of the drawer
@@ -44,7 +48,7 @@ export default class Drawer extends React.Component {
     noTouchClose: false,
     onChange: () => {},
     overlayColor: "rgba(0, 0, 0, 0.4)",
-    config: [350, 40],
+    config: { stiffness: 350, damping: 40 },
     open: false,
     width: 300,
     height: "100%",
