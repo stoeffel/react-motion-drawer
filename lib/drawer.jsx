@@ -145,7 +145,7 @@ export default class Drawer extends React.Component {
 
     const { currentState } = this.state;
     const { right, peakingWidth, handleWidth } = this.props;
-    const { width } = this.calculateWidth();
+    const width = this.calculateWidth();
     const { clientX } = pointers[0];
 
     let x = right ? document.body.clientWidth - clientX : clientX;
