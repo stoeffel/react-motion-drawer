@@ -8,9 +8,10 @@
     "serve": "webpack-dev-server --config example/webpack.config.js",
     "open": "opn http://localhost:8888/example/index.html",
     "lint": "eslint lib",
-    "patch-release": "npm run build && npm version patch && npm publish && git push --follow-tags",
-    "minor-release": "npm run build && npm version minor && npm publish && git push --follow-tags",
-    "major-release": "npm run build && npm version major && npm publish && git push --follow-tags"
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm version major && npm publish && git push --follow-tags",
+    "prepare": "npm run build"
   },
   "main": "./drawer.js",
   "files": [
