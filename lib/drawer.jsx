@@ -120,6 +120,7 @@ export default class Drawer extends React.Component {
   };
 
   onPressUp = e => {
+    if (this.props.noTouchClose) return;
     e.preventDefault();
     this.close();
   };
