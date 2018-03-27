@@ -1,6 +1,6 @@
 {
   "name": "react-motion-drawer",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
   "scripts": {
     "build": "babel lib --out-dir ./",
