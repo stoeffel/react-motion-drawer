@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Motion, spring } from "react-motion";
 import Hammer from "react-hammerjs";
-import assign from "1-liners/assign";
 import isFunction from "1-liners/isFunction";
 import styles from "./styles";
 
@@ -199,7 +198,7 @@ export default class Drawer extends React.Component {
             this.props
           );
 
-          let computedStyle = assign(drawer, drawerStyle);
+          let computedStyle = {...drawer, ...drawerStyle };
           if (interpolated.myProp > 0) computedStyle.display = "block";
           else computedStyle.display = "none";
 
