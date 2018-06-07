@@ -193,39 +193,39 @@ export default class Drawer extends React.Component {
     return (
       <Motion style={{ myProp: spring(Math.min(x + offset || 0, this.calculateWidth()), config) }}>
         {interpolated => {
-          const { drawer, transform, overlay } = styles(
+          const { drawer, transform, overlay, container } = styles(
             interpolated.myProp,
             this.props
           );
-
           let computedStyle = {...drawer, ...drawerStyle };
           if (interpolated.myProp > 0) computedStyle.display = "block";
           else computedStyle.display = "none";
-
           return (
-            <Hammer
-              onPress={this.onPress}
-              onPressUp={this.onPressUp}
-              onPan={this.onPan}
-              direction={Hammer.DIRECTION_HORIZONTAL}
-            >
-              <div style={transform}>
-                <div className={className} style={computedStyle}>
-                  {isFunction(children)
-                    ? children(interpolated.myProp)
-                    : children}
+            <div style={container}>
+              <Hammer
+                onPress={this.onPress}
+                onPressUp={this.onPressUp}
+                onPan={this.onPan}
+                direction={Hammer.DIRECTION_HORIZONTAL}
+              >
+                <div style={transform}>
+                  <div className={className} style={computedStyle}>
+                    {isFunction(children)
+                      ? children(interpolated.myProp)
+                      : children}
 
-                  {!this.isClosed() &&
-                    <Hammer
-                      style={overlay}
-                      className={overlayClassName}
-                      onTap={this.onOverlayTap}
-                    >
-                      <span />
-                    </Hammer>}
+                    {!this.isClosed() &&
+                      <Hammer
+                        style={overlay}
+                        className={overlayClassName}
+                        onTap={this.onOverlayTap}
+                      >
+                        <span />
+                      </Hammer>}
+                  </div>
                 </div>
-              </div>
-            </Hammer>
+              </Hammer>
+            </div>
           );
         }}
       </Motion>
