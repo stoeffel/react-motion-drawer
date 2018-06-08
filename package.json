@@ -12,6 +12,7 @@
     "patch-release": "npm version patch && npm publish && git push --follow-tags",
     "minor-release": "npm version minor && npm publish && git push --follow-tags",
     "major-release": "npm version major && npm publish && git push --follow-tags",
+    "release": "release-it",
     "prepare": "npm run build"
   },
   "main": "./drawer.js",
