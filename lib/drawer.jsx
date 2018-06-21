@@ -173,7 +173,7 @@ export default class Drawer extends React.Component {
 
   calculateWidth = () => {
     const width = this.props.width;
-    return /\D/.test(width)
+    return /\%/.test(width)
       ? document.body.clientWidth * (width.match(/\d*/) / 100)
       : width;
   };
