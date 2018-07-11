@@ -41,6 +41,9 @@
   "peerDependencies": {
     "react": "^15.4.2 || ^16.0.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
