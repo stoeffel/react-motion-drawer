@@ -1,5 +1,5 @@
 {
-  "name": "react-motion-drawer",
+  "name": "@gradeup/react-motion-drawer",
   "version": "3.1.1",
   "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
   "scripts": {
@@ -33,7 +33,6 @@
     "drawer",
     "navigation"
   ],
-  "author": "Christoph Hermann <schtoeffel@gmail.com> (http://github.com/stoeffel)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stoeffel/react-motion-drawer/issues"
