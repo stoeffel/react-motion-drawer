@@ -75,24 +75,27 @@ You can hook into the animation by passing a function as the child component.
 
 ### Props
 
-* `zIndex: number`           - z-index of the drawer (default `10000`)
-* `noTouchOpen: bool`        - can a user pan to open (default `false`)
-* `noTouchClose: bool`       - can a user pan to close(default `false`)
-* `onChange: func`           - called when the drawer is open (default `() => {}`)
-* `drawerStyle: object`      - additional drawer styles
-* `className: object`        - additional drawer className
-* `overlayClassName: object` - additional overlay className
-* `config: object`           - configuration of the react-motion animation (default `{stiffness: 350, damping: 40}`)
-* `open: bool`               - states if the drawer is open (default `false`)
-* `width: number`            - width of the drawer (default `300`)
-* `height: number`           - height of the drawer (default `'100%'`)
-* `handleWidth: number`      - width of the handle (default `20`)
-* `peakingWidth: number`     - width that the drawer peaks on press (default `50`)
-* `panTolerance: number`     - tolerance until the drawer starts to move (default `50`)
-* `right: bool`              - drawer on the right side of the screen (default `false`)
-* `overlayColor: string`     - color of the overlay (default `rgba(0, 0, 0, 0.4)`)
-* `fadeOut: bool`            - fade out (default `false`)
-* `offset: number`           - offset of the drawer (default `0`)
+| Prop Name            | type    | default                  | description                                              |
+|----------------------|---------|--------------------------|----------------------------------------------------------|
+| zIndex               | number  |  `10000`                 |       z-index of the drawer                              |
+| noTouchOpen          | bool    |  `false`                 |       can a user pan to open                             |
+| noTouchClose         | bool    |  `false`                 |       can a user pan to close                            |
+| onChange             | func    |  `() => {}`              |       called when the drawer is open                     |
+| drawerStyle          | object  |  `null`                  |       additional drawer styles                           |
+| className            | object  |  `null`                  |       additional drawer className                        |
+| overlayClassName     | object  |  `null`                  |       additional overlay className                       |
+| config               | object  |  `null`                  |       configuration of the react-motion animation        |
+| open                 | bool    |  `false`                 |       states if the drawer is open                       |
+| width                | number  |  `300`                   |       width of the drawer                                |
+| height               | number  |  `100%`                  |       height of the drawer                               |
+| handleWidth          | number  |  `20`                    |       width of the handle                                |
+| peakingWidth         | number  |  `50`                    |       width that the drawer peaks on press               |
+| panTolerance         | number  |  `50`                    |       tolerance until the drawer starts to move          |
+| right                | bool    |  `false`                 |       drawer on the right side of the screen             |
+| overlayColor         | string  |  `'rgba(0, 0, 0, 0.4)'`  |       color of the overlay                               |
+| fadeOut              | bool    |  `false`                 |       fade out                                           |
+| offset               | number  |  `0`                     |       offset of the drawer                               |
+
 
 ## License
 
