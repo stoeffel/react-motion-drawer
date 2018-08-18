@@ -75,7 +75,7 @@ You can hook into the animation by passing a function as the child component.
 
 ### Props
 
-| props                | type    | default                  | description                                              |
+| Prop Name            | type    | default                  | description                                              |
 |----------------------|---------|--------------------------|----------------------------------------------------------|
 | zIndex               | number  |  `10000`                 |       z-index of the drawer                              |
 | noTouchOpen          | bool    |  `false`                 |       can a user pan to open                             |
