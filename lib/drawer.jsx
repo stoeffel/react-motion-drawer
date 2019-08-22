@@ -117,7 +117,8 @@ export default class Drawer extends React.Component {
   }
 
   onPress = e => {
-    if (this.props.noTouchOpen) return;
+    const isTouchScroll = e.center.x >= (this.calculateWidth() - 17) && e.center.x <= this.calculateWidth()
+    if (this.props.noTouchOpen || isTouchScroll) return
     e.preventDefault();
     this.peak();
   };
