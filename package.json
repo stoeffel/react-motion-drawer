@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/stoeffel/react-motion-drawer.git"
+    "url": "https://github.com/gradeup/react-motion-drawer.git"
   },
   "keywords": [
     "react",
@@ -42,7 +42,8 @@
     "react": "^15.4.2 || ^16.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
