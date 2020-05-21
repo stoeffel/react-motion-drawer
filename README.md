@@ -1,3 +1,6 @@
+<h1 align="center">ARCHIVED because I didn't have time nor use for this for a long time.</h1>
+I'd be happy to transfer ownership if someone is interested.
+
 <h1 align="center">react-motion-drawer</h1>
 
 <p align="center">
